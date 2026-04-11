@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌿 HanapDamo API Server
+# 🌿 HanapMedisina API Server
 **The secure Node.js & Express backend for the HanapDamo Mobile App.**
 
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](#)
@@ -47,7 +47,7 @@ To run this server, you must securely connect it to your Firebase project. **Nev
 **1. The `.env` File**
 Create a `.env` file in the root directory and add your port configuration:
 ```env
-PORT=8000
+PORT=3000
 # Add any future secret keys here
 ```
 
@@ -80,7 +80,6 @@ npm start
 ```bash
 npm run dev
 ```
-*(Requires `nodemon` installed: `npm install -D nodemon`)*
 
 ---
 
@@ -105,12 +104,12 @@ All write requests require a valid Firebase ID Token passed in the `Authorizatio
 
 ## 🔌 Connecting to the Mobile App
 
-If you are running this server locally (e.g., at `http://localhost:8000`) and testing the mobile app on a physical Android device via USB, your phone cannot reach "localhost" over the network.
+If you are running this server locally (e.g., at `http://localhost:3000`) and testing the mobile app on a physical Android device via USB, your phone cannot reach "localhost" over the network.
 
 You must reverse-proxy the port using ADB so the phone bridges to your laptop's server. Open a separate terminal and run:
 
 ```bash
-adb reverse tcp:8000 tcp:8000
+adb reverse tcp:3000 tcp:3000
 ```
 *You must run this command every time you unplug and replug your phone.*
 
