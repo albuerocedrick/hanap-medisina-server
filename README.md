@@ -91,12 +91,8 @@ npm run dev
 
 All write requests require a valid Firebase ID Token passed in the `Authorization: Bearer <token>` header.
 
-### 🌿 Scans & History
+### 🌿 Scans & History (Sample ONly)
 * `POST /api/scan/sync` - Receives an array of offline scans from the mobile app, validates the user token, and writes the batch to Firestore.
-
-### 👤 User Management
-* `POST /api/user/profile` - Initializes a new user profile in Firestore after they register on the mobile app.
-* `GET /api/user/stats` - Retrieves secured user statistics (e.g., total plants scanned).
 
 </details>
 
