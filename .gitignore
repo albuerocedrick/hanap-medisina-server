@@ -1,0 +1,13 @@
+#keys
+serviceAccountKey.json
+
+# Environment variables
+.env
+
+# Dependencies (They are too big)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
