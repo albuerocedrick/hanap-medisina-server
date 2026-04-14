@@ -1,6 +1,7 @@
 <div align="center">
 
 # 🌿 HanapMedisina API Server
+
 **The secure Node.js & Express backend for the HanapDamo Mobile App.**
 
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](#)
@@ -15,6 +16,7 @@
 ---
 
 ## 📑 Table of Contents
+
 1. [Tech Stack](#-tech-stack)
 2. [Prerequisites](#-prerequisites)
 3. [Environment Setup & Secrets](#-environment-setup--secrets)
@@ -25,16 +27,18 @@
 ---
 
 ## 🏗 Tech Stack
-* **Runtime:** Node.js
-* **Framework:** Express.js
-* **Authentication/Security:** Firebase Admin SDK (ID Token Verification)
-* **Database:** Cloud Firestore
+
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Authentication/Security:** Firebase Admin SDK (ID Token Verification)
+- **Database:** Cloud Firestore
 
 ---
 
 ## 🚀 Prerequisites
 
 Before cloning this repository, ensure you have:
+
 1. **[Node.js](https://nodejs.org/)** (v18 or higher)
 2. **Firebase Project Setup:** A Firebase project with Firestore and Authentication enabled.
 
@@ -46,6 +50,7 @@ To run this server, you must securely connect it to your Firebase project. **Nev
 
 **1. The `.env` File**
 Create a `.env` file in the root directory and add your port configuration:
+
 ```env
 PORT=3000
 # Add any future secret keys here
@@ -53,6 +58,7 @@ PORT=3000
 
 **2. The Firebase Admin Key**
 This server requires a Service Account Key to bypass standard Firebase security rules safely.
+
 1. Go to your Firebase Console > **Project Settings** > **Service Accounts**.
 2. Click **Generate new private key** and download the JSON file.
 3. Rename the downloaded file to `serviceAccountKey.json`.
@@ -65,6 +71,7 @@ This server requires a Service Account Key to bypass standard Firebase security 
 ## 🛠 Installation & Running
 
 **1. Clone the repository and install dependencies:**
+
 ```bash
 git clone [https://github.com/YOUR_USERNAME/hanap-medisina-server.git](https://github.com/YOUR_USERNAME/hanap-medisina-server.git)
 cd hanap-medisina-server
@@ -72,11 +79,14 @@ npm install
 ```
 
 **2. Start the Server:**
-*For standard execution:*
+_For standard execution:_
+
 ```bash
 npm start
 ```
-*For development (auto-restarts when you save files):*
+
+_For development (auto-restarts when you save files):_
+
 ```bash
 npm run dev
 ```
@@ -92,7 +102,8 @@ npm run dev
 All write requests require a valid Firebase ID Token passed in the `Authorization: Bearer <token>` header.
 
 ### 🌿 Scans & History (Sample ONly)
-* `POST /api/scan/sync` - Receives an array of offline scans from the mobile app, validates the user token, and writes the batch to Firestore.
+
+- `POST /api/scan/sync` - Receives an array of offline scans from the mobile app, validates the user token, and writes the batch to Firestore.
 
 </details>
 
@@ -107,9 +118,11 @@ You must reverse-proxy the port using ADB so the phone bridges to your laptop's 
 ```bash
 adb reverse tcp:3000 tcp:3000
 ```
-*You must run this command every time you unplug and replug your phone.*
+
+_You must run this command every time you unplug and replug your phone._
 
 ---
+
 <div align="center">
   <i>Developed for HanapDamo Mobile</i>
 </div>
