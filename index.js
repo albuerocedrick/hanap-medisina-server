@@ -15,6 +15,10 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+const userRoutes = require("./src/routes/user.routes");
+
+app.use("/api/user", userRoutes);
+
 app.get("/", (req, res) => res.send("Hanap Medicina API is Live!"));
 
 app.get("/api/ping", (req, res) => {
